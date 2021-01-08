@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: 'Kumar One', cursive;
+    box-sizing: border-box;
+}
+
+.fn-font {
+    font-family: 'Kumar One', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    margin: 0 auto;
+    
+}
+
+.container {}
+
+/*header*/
+header h1 {
+    margin-left: 20px;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    background-image: linear-gradient(180deg, #d5e2ff, #000000);
+    padding: 0 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header nav {
+    width: 600px;
+    height: 100%;
+
+}
+
+header nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header nav ul li {
+    font-size: 19px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.related a {
+    padding: 10px 20px;
+}
+
+/*visual*/
+.section input[id*="slide"] {
+    display: none;
+}
+
+.section .sllidewrap {
+    overflow: hidden;
+}
+
+.section .slidelist {
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.section .slidelist li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.section .slidelist li a {
+    display: block;
+    position: relative;
+}
+
+.section .slidelist li a img {
+    width: 100%;
+    height: 460px;
+}
+
+.section .slidelist label {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    cursor: pointer;
+}
+
+.section .slidelist .left {
+    left: 30px;
+    background: url(img/left.png) center center /100% no-repeat;
+}
+
+.section .slidelist .right {
+    right: 30px;
+    background: url(img/right.png) center center /100% no-repeat;
+}
+
+.section input[id="slide01"]:checked ~ .sllidewrap .slidelist > li {
+    transform: translateX(0%)
+}
+
+.section input[id="slide02"]:checked ~ .sllidewrap .slidelist > li {
+    transform: translateX(-100%)
+}
+
+.section input[id="slide03"]:checked ~ .sllidewrap .slidelist > li {
+    transform: translateX(-200%)
+}
+
+.content {
+    padding: 50px;
+}
+.content .item {
+    display: flex;
+	justify-content: space-around;
+    text-align: center;
+    
+}
+.content .infomation {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 40px
+}
+
+.content h2:after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid rgba(46, 80, 157, 0.37);
+    width: 15%;
+    margin: 0 auto;
+
+}
+.content .Nitem{
+    width: 25%;
+    padding: 60px 40px
+}
+.content .Nitem span{
+    border-bottom: 1px solid #333;
+    
+}
+.content .img{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    margin: 20px 0 ;
+    padding: 10px 30px;
+    color: white;
+    background: #3b3b3b
+}
+.btn:hover{
+    background-color: #989898;
+    transition: 1s;
+}
+
+/*Latest*/
+.Latest {
+    margin: 10px 130px;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 70px;
+    
+}
+h3:after{
+    content: '';
+    display: flex;
+    border-bottom: 3px solid rgba(46, 80, 157, 0.37);
+    width: 15%;
+    margin: 0 auto;
+}
+.Latest {
+   
+}
+.Latest .latest1 .photo{
+    background-image: url(img/mean-joe-hd.jpg);
+    background-size:cover;
+    flex: 3;
+    height: 500px; 
+    position: relative;
+    background-position: 0px 70px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.35);
+    border-radius: 15px
+    
+}
+.Latest .latest1 .text{
+    flex: 2;
+    padding: 50px;
+    background-color: #116671;
+    opacity: 95%;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 15px
+}
+footer{
+    margin-top: 80px;
+    width: 100%;
+    background-color: #000;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+    
+}
+
+footer *{
+    color: white;
+    margin-left: 20px;
+    line-height: 3;
+    
+}
+footer h4{
+    padding: 50px
+}
+footer p{
+    display: flex;
+    font-size: 12px;
+    color: #919191;
+    
+    
+}
+footer img{
+    width: 100px;
+    float: right;
+    margin-right: 50px;
+    
+}
+
+
+
+
+
