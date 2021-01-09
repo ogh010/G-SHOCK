@@ -159,6 +159,7 @@ header nav ul li a:hover:before {
     transform: translateX(-200%)
 }
 
+/*content*/
 .content {
     padding: 50px;
 }
@@ -257,6 +258,7 @@ a .screen {
     position: relative;
     overflow: hidden;
     padding-bottom: 600px;
+    display: block;
 }
 
 a .screen img {
@@ -266,7 +268,12 @@ a .screen img {
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: 1;
-    height: 600px
+    height: 600px;
+    transition: transform 1.5s;
+        
+}
+a .screen img:hover{
+    transform: translate(-50%,-50%) scale(1.1)
 }
 a .screen p{
     position: absolute;
@@ -333,7 +340,7 @@ a:hover .screen span:nth-child(4) {
     transition-delay: .3s;
 }
 
-
+/*fooer*/
 footer {
     margin-top: 80px;
     width: 100%;
