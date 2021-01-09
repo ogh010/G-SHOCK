@@ -21,7 +21,7 @@ a {
 
 body {
     margin: 0 auto;
-    
+
 }
 
 .container {}
@@ -29,6 +29,8 @@ body {
 /*header*/
 header h1 {
     margin-left: 20px;
+    animation: slid-up;
+    animation-duration: 0.5s;
 }
 
 header {
@@ -47,6 +49,7 @@ header nav {
     width: 600px;
     height: 100%;
 
+
 }
 
 header nav ul {
@@ -64,8 +67,33 @@ header nav ul li {
     align-items: center;
 }
 
+header nav ul li a {
+    position: relative;
+    display: block;
+    animation: slid-up;
+    animation-duration: 0.5s;
+}
+
+header nav ul li a:before {
+    content: '';
+    width: 0;
+    height: 4px;
+    position: absolute;
+    background: darkorange;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease;
+}
+
+header nav ul li a:hover:before {
+    width: 100%
+}
+
 .related a {
     padding: 10px 20px;
+    animation: slid-up;
+    animation-duration: 0.5s;
 }
 
 /*visual*/
@@ -92,6 +120,7 @@ header nav ul li {
 .section .slidelist li a {
     display: block;
     position: relative;
+
 }
 
 .section .slidelist li a img {
@@ -133,15 +162,19 @@ header nav ul li {
 .content {
     padding: 50px;
 }
+
 .content .item {
     display: flex;
-	justify-content: space-around;
+    justify-content: space-around;
     text-align: center;
-    
+
 }
+
 .content .infomation {
     text-align: center;
     margin-bottom: 30px;
+    animation: slid-up;
+    animation-duration: 1.5s;
 }
 
 .content h2 {
@@ -157,27 +190,37 @@ header nav ul li {
     margin: 0 auto;
 
 }
-.content .Nitem{
+
+.content .Nitem {
     width: 25%;
     padding: 60px 40px
 }
-.content .Nitem span{
+
+.content .Nitem span {
     border-bottom: 1px solid #333;
-    
+
 }
-.content .img{
+
+.content .img {
     width: 100%;
     height: 250px;
     margin-bottom: 30px;
+
 }
 
-.btn{
-    margin: 20px 0 ;
+.content .img:hover {
+    animation: slid-up2;
+    animation-duration: 1s;
+}
+
+.btn {
+    margin: 20px 0;
     padding: 10px 30px;
     color: white;
     background: #3b3b3b
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #989898;
     transition: 1s;
 }
@@ -187,43 +230,111 @@ header nav ul li {
     margin: 10px 130px;
 }
 
-h3{
+h3 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 70px;
-    
+
 }
-h3:after{
+
+h3:after {
     content: '';
     display: flex;
     border-bottom: 3px solid rgba(46, 80, 157, 0.37);
     width: 15%;
     margin: 0 auto;
 }
-.Latest {
-   
-}
-.Latest .latest1 .photo{
-    background-image: url(img/mean-joe-hd.jpg);
-    background-size:cover;
-    flex: 3;
-    height: 500px; 
-    position: relative;
-    background-position: 0px 70px;
-    box-shadow: 0 0 80px rgba(0, 0, 0, 0.35);
-    border-radius: 15px
+
+.Latest a {
+    display: block;
+    width: auto;
+    color: #333;
+    margin: 5px 5px 10px 5px;
     
 }
-.Latest .latest1 .text{
-    flex: 2;
-    padding: 50px;
-    background-color: #116671;
-    opacity: 95%;
-    text-align: center;
-    font-size: 30px;
-    border-radius: 15px
+
+a .screen {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 600px;
 }
-footer{
+
+a .screen img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+    height: 600px
+}
+a .screen p{
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    background-color: rgba(48, 208, 198, 0.76);
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0%;
+    padding: 70px;
+    width: 100%;
+}
+a .screen span {
+    display: block;
+    position: absolute;
+    transition: all .2s;
+    background:linear-gradient(90deg, skyblue, yellow);
+    z-index: 2;
+}
+
+a .screen span:nth-child(1) {
+    top: 0;
+    height: 15px;
+    width: 0;
+}
+
+a .screen span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 0;
+}
+
+a .screen span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    height: 15px;
+    width: 0;
+}
+
+a .screen span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 15px;
+    height: 0;
+}
+
+a:hover .screen span:nth-child(1) {
+    width: 100%;
+}
+
+a:hover .screen span:nth-child(2) {
+    height: 100%;
+    transition-delay: .1s;
+}
+
+a:hover .screen span:nth-child(3) {
+    width: 100%;
+    transition-delay: .2s;
+}
+
+a:hover .screen span:nth-child(4) {
+    height: 100%;
+    transition-delay: .3s;
+}
+
+
+footer {
     margin-top: 80px;
     width: 100%;
     background-color: #000;
@@ -231,33 +342,70 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between
-    
 }
 
-footer *{
+footer * {
     color: white;
     margin-left: 20px;
     line-height: 3;
-    
+
 }
-footer h4{
+
+footer h4 {
     padding: 50px
 }
-footer p{
+
+footer p {
     display: flex;
     font-size: 12px;
     color: #919191;
-    
-    
+
+
 }
-footer img{
+
+footer img {
     width: 100px;
     float: right;
     margin-right: 50px;
-    
+
 }
 
+.more a {
+    display: block;
+    position: relative;
+}
 
+.more a:before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    background: darkorange;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 0.5s ease;
+}
 
+.more a:hover:before {
+    width: 0
+}
 
+@keyframes slid-up {
+    0% {
+        opacity: 0;
+    }
 
+    40% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+@keyframes slid-up2 {
+
+    /*   0% {opacity: 0;}*/
+    40% {
+        transform: translateY(-40px);
+    }
+}
